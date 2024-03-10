@@ -2,6 +2,10 @@ const express = require("express");
 const axios = require("axios");
 const app = express();
 const PORT = process.env.PORT || 3000;
+const cors = require("cors");
+
+// Habilitar CORS
+app.use(cors());
 
 // Endpoint para obtener la lista de razas de perros
 app.get("/api/razas", async (req, res) => {
